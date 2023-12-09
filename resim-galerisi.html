@@ -7,7 +7,7 @@
 
 
         body {
-            text-align: center; /* Sayfa içeriğini ortala Enn önemlisi bu*/
+            text-align: center; 
         }
 
         #header {
@@ -22,7 +22,7 @@
             margin: 10px;
             padding-right: 5px;
             text-align: center;
-            vertical-align: middle; /* Resimleri dikey olarak ortala */
+            vertical-align: middle; /* Resimleri dikey olarak ortaladım "center" da istedigim gibi olmayınca. */
             /* border: 7px solid red */
         }
 
@@ -40,13 +40,13 @@
 
     <script>
         function resimGalerisi() {
-            const div = document.querySelector(".divcik");
+            const div = document.querySelector(".divcik"); // divcik adlı classı cekiyorum.
 
-            // İstenilen sayıda resim eklemek için bir döngü kullanabilirsin.
-            for (let i = 0; i < 12; i++) { // Örneğin, 12 resim ekledim.
+            
+            for (let i = 0; i < 12; i++) { // 12 resim ekledim.
                 const img = document.createElement("img");
                 img.src = `https://source.unsplash.com/random/300x300?random=${i}`;
-                div.appendChild(img); // img ögelerini divin içine taşıma
+                div.appendChild(img); // img ögelerini divin içine taşıdım
             }
         }
 
