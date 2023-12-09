@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resim Galerisi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+
+
+        body {
+            text-align: center; /* Sayfa içeriğini ortala Enn önemlisi bu*/
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        .divcik {
+            display: inline-block; /* Resimleri yatay olarak sıralamak için kullandım. */
+        }
+
+        .divcik img {
+            margin: 10px;
+            padding-right: 5px;
+            text-align: center;
+            vertical-align: middle; /* Resimleri dikey olarak ortala */
+            /* border: 7px solid red */
+        }
+
+        img:hover{
+            width: 350px;
+        }
+
+        /* .btn{
+            margin: komple dışla olan baglantı
+            padding: yazının dısla olan baglantı
+        } */
+
+        
+    </style>
+
+    <script>
+        function resimGalerisi() {
+            const div = document.querySelector(".divcik");
+
+            // İstenilen sayıda resim eklemek için bir döngü kullanabilirsin.
+            for (let i = 0; i < 12; i++) { // Örneğin, 12 resim ekledim.
+                const img = document.createElement("img");
+                img.src = `https://source.unsplash.com/random/300x300?random=${i}`;
+                div.appendChild(img); // img ögelerini divin içine taşıma
+            }
+        }
+
+        // Sayfa yüklendiğinde galeriyi oluştur.
+        document.addEventListener("DOMContentLoaded", resimGalerisi);
+    </script>
+</head>
+<body>
+    <h1 id="header">Resim Galerisi</h1>
+    <button type="button" class="btn btn-secondary" onclick="location.reload()">Sayfayı Yenile</button>   <!-- birazda güzelleştirelim diye boostrap'ın button classlarından yararlandım!  -->
+    <div class="divcik"></div>
+
+    <h4 id="paragraf">Kodlayan: Akif Enes Dedeoluk</h4>
+</body>
+</html>
